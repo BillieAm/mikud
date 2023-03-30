@@ -1,0 +1,16 @@
+---
+// library imports
+import { Icon } from "astro-icon";
+
+// data imports
+import navData from "../data/navData";
+---
+
+<nav>
+  <div class="navbar">
+    <a href="/" class="logomark" aria-label="Go home"> Logo</a>
+    <ul>
+      {navData.map(item => <a href={item.path}>{item.name}</a>)}
+    </ul>
+  </div>
+</nav>
