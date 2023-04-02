@@ -5,11 +5,23 @@ import { Icon } from "astro-icon";
 // component imports
 import Link from "./Link.astro";
 
-// data imports
-import navData from "../data/navData";
-
 // images imports
 import logo from "../images/logo.png";
+
+const navLinks: { name: string; path: string }[] = [
+  {
+    name: "שירותים",
+    path: "/שירותים/"
+  },
+  {
+    name: "אודות",
+    path: "/אודות/"
+  },
+  {
+    name: "למה אנחנו?",
+    path: "/למה-אנחנו/"
+  }
+];
 ---
 
 <nav>
@@ -18,7 +30,7 @@ import logo from "../images/logo.png";
       <img src={logo} width="60" alt="logo mark" />
     </a>
     <ul>
-      {navData.map(item => <Link href={item.path} text={item.name} />)}
+      {navLinks.map(item => <Link href={item.path} text={item.name} />)}
     </ul>
   </div>
 </nav>
