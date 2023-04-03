@@ -1,11 +1,12 @@
 ---
 // component imports
 import MainHead from "./MainHead.astro";
-import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 // style imports
 import "../styles/global.css";
+import "@fontsource/rubik";
 
 export interface Props {
   title?: string;
@@ -22,7 +23,7 @@ const {
 <html lang="he" dir="rtl">
   <MainHead title={title} description={description} />
   <body>
-    <Nav />
+    <Header />
     <main>
       <slot />
     </main>
