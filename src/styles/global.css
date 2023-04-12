@@ -1,3 +1,16 @@
-.link {
-  text-decoration: none;
+/* hamburger/close icon animation */
+.line {
+  @apply w-full h-1 bg-slate-600 rounded-lg transform transition duration-300 ease-in-out;
+}
+
+.open .top {
+  @apply rotate-45 translate-y-2.5;
+}
+
+.open .middle {
+  @apply hidden;
+}
+
+.open .bottom {
+  @apply -rotate-45 -translate-y-2.5;
 }

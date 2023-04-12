@@ -22,11 +22,18 @@ const {
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
   <MainHead title={title} description={description} />
-  <body>
+  <body class="text-slate-600">
     <Header />
     <main>
       <slot />
     </main>
     <Footer />
+
+    <script>
+      const btn = document.getElementById("menu-btn") as HTMLButtonElement;
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
