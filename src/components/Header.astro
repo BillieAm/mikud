@@ -4,46 +4,27 @@ import { Image } from "@astrojs/image/components";
 
 // component imports
 import Link from "./Link.astro";
-import Hamburger from "./Hamburger.astro";
+import { Hamburger } from "./Hamburger.jsx";
+import { MobileMenu } from "./MobileMenu";
 
 // images imports
 import logo from "../images/logo.png";
 
-const navLinks: { name: string; path: string }[] = [
-  {
-    name: "שירותים",
-    path: "/שירותים/"
-  },
-  {
-    name: "אודות",
-    path: "/אודות/"
-  },
-  {
-    name: "למה אנחנו?",
-    path: "/למה-אנחנו/"
-  }
-];
+// data imports
+import { navLinks } from "../data";
 ---
 
 <header class="fixed w-full bg-red-200 ease-in duration-300">
   <div
     class="flex justify-between items-center xmax-w-screen-2xl mx-auto px-3 md:px-11 md:py-2"
   >
-    <!-- mobile menu  -->
-    <Hamburger />
-
-    <div class="hidden fixed z-49 inset-0">
-      <!-- overlay -->
-      <div class="fixed inset-0 bg-black/30 backdrop-blur-sm"></div>
-
-      <nav
-        class="flex flex-col gap-7 fixed inset-y-0 right-full left-1/4 bg-white px-11 py-32 font-bold"
-      >
-        <Link href="/" text="בית" />
-        {navLinks.map(item => <Link href={item.path} text={item.name} />)}
-        <Link href="/צור-קשר/" text="צרו קשר" />
-      </nav>
-    </div>
+    <!-- mobile menu islands  -->
+    <Hamburger client:idle />
+    <MobileMenu client:idle>
+      <Link href="/" text="בית" />
+      {navLinks.map(item => <Link href={item.path} text={item.name} />)}
+      <Link href="/צור-קשר/" text="צרו קשר" />
+    </MobileMenu>
 
     <!-- large screen menu -->
     <a href="/" class="w-12 md:w-16" aria-label="Go home">
