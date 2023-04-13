@@ -1,7 +1,4 @@
 ---
-// library imports
-import { Image } from "@astrojs/image/components";
-
 // component imports
 import Link from "./Link.astro";
 import { Hamburger } from "./Hamburger.jsx";
@@ -14,9 +11,9 @@ import logo from "../images/logo.png";
 import { navLinks } from "../data";
 ---
 
-<header class="sticky top-0 bg-red-200 ease-in duration-300">
+<header class="sticky top-0">
   <div
-    class="flex justify-between items-center xmax-w-screen-2xl mx-auto px-3 md:px-11 md:py-2"
+    class="flex justify-between items-center max-w-7xl mx-auto px-3 sm:px-6 sm:py-1 md:px-11 md:py-2"
   >
     <!-- mobile menu islands  -->
     <Hamburger client:idle />
@@ -26,14 +23,18 @@ import { navLinks } from "../data";
       <Link href="/צור-קשר/" text="צרו קשר" />
     </MobileMenu>
 
-    <!-- large screen menu -->
+    <!-- larger devices menu -->
     <a href="/" class="w-12 md:w-16" aria-label="Go home">
       <img src={logo.src} alt="logomark" />
     </a>
     <nav class="hidden gap-16 md:flex">
       {navLinks.map(item => <Link href={item.path} text={item.name} />)}
     </nav>
-    <Link href="/צור-קשר/" text="צרו קשר" classes="hidden font-bold md:block" />
+    <Link
+      href="/צור-קשר/"
+      text="צרו קשר"
+      classes="hidden md:font-bold md:block md:text-white md:bg-black md:px-5 py-2 md:rounded"
+    />
   </div>
 </header>
 

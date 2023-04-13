@@ -4,7 +4,7 @@
 
 /* hamburger/close icon animation */
 .line {
-  @apply w-full h-1 bg-slate-600 rounded-lg transform transition duration-200 ease-in-out;
+  @apply w-full h-1 bg-slate-600 rounded-lg transition;
 }
 
 .open .top {
