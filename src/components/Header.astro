@@ -14,7 +14,7 @@ import logo from "../images/logo.png";
 import { navLinks } from "../data";
 ---
 
-<header class="fixed w-full bg-red-200 ease-in duration-300">
+<header class="sticky top-0 bg-red-200 ease-in duration-300">
   <div
     class="flex justify-between items-center xmax-w-screen-2xl mx-auto px-3 md:px-11 md:py-2"
   >
@@ -36,3 +36,15 @@ import { navLinks } from "../data";
     <Link href="/צור-קשר/" text="צרו קשר" classes="hidden font-bold md:block" />
   </div>
 </header>
+
+<script>
+  const header = document.querySelector("header") as HTMLElement;
+
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("scroll");
+    } else {
+      header.classList.remove("scroll");
+    }
+  });
+</script>
