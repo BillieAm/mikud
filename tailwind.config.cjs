@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         primary: "hsl(179, 39%, 40%)",
         secondary: "hsl(180, 38%, 77%)",
-        bg: "hsl(180, 36%. 96%)"
+        bg: "hsl(180, 36%, 96%)"
       },
       fontFamily: {
         sans: ["Rubik", ...defaultTheme.fontFamily.sans]
