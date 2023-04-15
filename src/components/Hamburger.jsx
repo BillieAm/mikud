@@ -3,8 +3,7 @@ import { menu, toggle } from "../store";
 export const Hamburger = () => {
   return (
     <button
-      id="menu-btn"
-      aria-label="פתיחת תפריט"
+      aria-label={menu.value === "closed" ? "פתיחת תפריט" : "סגירת תפריט"}
       onClick={toggle}
       class={`flex flex-col justify-between items-center relative z-50 w-6 h-6 md:hidden ${
         menu.value === "open" && "open"

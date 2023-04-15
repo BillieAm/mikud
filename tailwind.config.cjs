@@ -5,12 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "hsl(179, 39%, 40%)",
-        secondary: "hsl(180, 38%, 77%)",
-        bg: "hsl(180, 36%, 96%)"
+        "main-green": "hsl(179, 39%, 40%)",
+        "btn-green": "hsl(180, 38%, 77%)",
+        "bg-green": "hsl(180, 36%, 96%)",
+        "dark-blue": "hsl(214, 70%, 29%)",
+        "light-blue": "hsl(207, 54%, 52%)"
       },
       fontFamily: {
-        sans: ["Rubik", ...defaultTheme.fontFamily.sans]
+        sans: ["Rubik", ...defaultTheme.fontFamily.sans],
+        headings: ["Assistant", "sans-serif"]
       }
     }
   },
