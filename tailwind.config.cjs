@@ -5,11 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "main-green": "hsl(179, 39%, 40%)",
+        "green-logo": "hsl(179, 39%, 40%)",
         "btn-green": "hsl(180, 38%, 77%)",
         "bg-green": "hsl(180, 36%, 96%)",
         "dark-blue": "hsl(214, 70%, 29%)",
-        "light-blue": "hsl(207, 54%, 52%)"
+        "light-blue": "hsl(207, 54%, 52%)",
+        aqua: "hsl(162, 100%, 56%)",
+        "text-color": "hsl(225, 62%, 10%)",
+        salmon: "hsl(0, 94%, 80%)"
       },
       fontFamily: {
         sans: ["Rubik", ...defaultTheme.fontFamily.sans],
