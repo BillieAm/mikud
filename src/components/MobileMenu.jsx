@@ -4,7 +4,7 @@ import { menu, toggle } from "../store";
 export const MobileMenu = ({ children }) => {
   if (menu.value === "closed") return null;
   return (
-    <aside onClick={toggle} class="fixed z-49 inset-0">
+    <aside onClick={toggle} class="fixed z-40 inset-0">
       <div class="fixed inset-0 bg-black/30 backdrop-blur-sm"></div>
       <nav
         onClick={e => e.stopPropagation()}
