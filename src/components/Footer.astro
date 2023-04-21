@@ -1,7 +1,15 @@
-<footer>
-  <small>
-    Copyright &copy; <span id="copyright"></span> | All rights reserved
-  </small>
+---
+// images imports
+import logo from "../images/logo.png";
+---
+
+<footer class="bg-bg-green p-4">
+  <div class="flex justify-center items-end gap-5">
+    <small>
+      Copyright &copy; <span id="copyright"></span> | All rights reserved
+    </small>
+    <img src={logo.src} alt="logomark" width="50" />
+  </div>
 </footer>
 
 <script>
