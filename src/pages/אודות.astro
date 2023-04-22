@@ -12,7 +12,13 @@ import TeamMember from "../components/TeamMember.astro";
 ---
 
 <MainLayout>
-  <PageLayout heading="מי אנחנו?">
+  <PageLayout heading="אודות">
+    <p class="text-green-logo mb-16">
+      הצוות המקצועי שלנו ישמח להעמיד לרשותכם את הידע והניסיון שלו במגוון משימות
+      כולל גיוס, קליטה בארגון או בתפקיד חדש, הפקת משכורות ובנית מערך שכר, בנית
+      מערך הערכה ותוכניות רווחה וקידום לעובדים, ייעוץ במהלכי כוח-אדם אסטרטגיים,
+      ניהול התקשרות הפורמאלית עם העובד ועוד.
+    </p>
     {teamEntries.map(entry => <TeamMember member={entry} />)}
   </PageLayout>
 </MainLayout>
