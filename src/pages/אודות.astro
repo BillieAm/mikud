@@ -1,29 +1,18 @@
 ---
-// library imports
-import { Image } from "astro:assets";
 // layouts imports
 import MainLayout from "../layouts/MainLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 
-// images imports
-import ariel from "../assets/ariel.jpg";
-import nissim from "../assets/nissim.jpg";
+// markdown imports
+import { getCollection } from "astro:content";
+
+const teamEntries = await getCollection("team");
+
+import TeamMember from "../components/TeamMember.astro";
 ---
 
 <MainLayout>
   <PageLayout heading="מי אנחנו?">
-    <section
-      class="flex flex-col justify-center items-center gap-8 md:flex-row"
-    >
-      <Image src={nissim} alt="Nissim Cohen" class="rounded-full" />
-      <div>
-        <h2
-          class="text-green-logo text-2xl font-bold tracking-wider md:text-3xl"
-        >
-          ניסים כהן
-        </h2>
-        <h3 class="text-green-logo/70 text-xl">מנכ״ל</h3>
-      </div>
-    </section>
+    {teamEntries.map(entry => <TeamMember member={entry} />)}
   </PageLayout>
 </MainLayout>

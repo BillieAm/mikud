@@ -1,0 +1,36 @@
+---
+// library imports
+import { Image } from "astro:assets";
+
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  member: CollectionEntry<"team">;
+}
+
+const { member } = Astro.props;
+const { Content } = await member.render();
+---
+
+<!-- <section class="mb-24 lg:grid grid-cols-3 content-center gap-8"> -->
+<section class="mb-24 lg:flex items-center gap-8">
+  <div
+    class="w-72 shrink-0 mx-auto mb-6 rounded-full overflow-hidden aspect-square"
+  >
+    <Image
+      src={member.data.image}
+      alt={member.data.imageAlt}
+      class="h-full object-cover"
+    />
+  </div>
+
+  <div class="col-span-2">
+    <h2 class="text-green-logo text-2xl font-bold tracking-wider md:text-3xl">
+      {member.data.name}
+    </h2>
+    <h3 class="text-green-logo/70 text-xl mb-4">{member.data.role}</h3>
+    <p>
+      <Content />
+    </p>
+  </div>
+</section>

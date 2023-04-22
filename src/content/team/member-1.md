@@ -1,7 +1,8 @@
 ---
 name: ניסים כהן
 role: מנכ״ל
-image: { src: "/images/post-1.jpg", alt: "A picture of a coder" }
+image: ../../assets/nissim.jpg
+imageAlt: ניסים כהן
 ---
 
 לניסים ניסיון עשיר כמנהל אגף משאבי אנוש בעיריית אור עקיבא וחדרה במשך כמה עשורים.
