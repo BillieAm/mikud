@@ -1,13 +1,13 @@
 ---
 // library imports
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 // layouts imports
 import MainLayout from "../layouts/MainLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 
 // images imports
-import ariel from "../images/ariel.jpg";
-import nissim from "../images/nissim.jpg";
+import ariel from "../assets/ariel.jpg";
+import nissim from "../assets/nissim.jpg";
 ---
 
 <MainLayout>
@@ -15,13 +15,7 @@ import nissim from "../images/nissim.jpg";
     <section
       class="flex flex-col justify-center items-center gap-8 md:flex-row"
     >
-      <Image
-        src={nissim}
-        alt="Nissim Cohen"
-        width={300}
-        aspectRatio="1:1"
-        class="rounded-full"
-      />
+      <Image src={nissim} alt="Nissim Cohen" class="rounded-full" />
       <div>
         <h2
           class="text-green-logo text-2xl font-bold tracking-wider md:text-3xl"
