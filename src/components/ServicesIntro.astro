@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+
+const servicesIntroEntries = await getCollection("servicesIntro");
+---
+
+<div
+  class="flex flex-col gap-24 max-w-7xl mx-auto my-10 px-6 pt-14 sm:px-12 md:px-24 sm:[&>*:nth-child(even)]:flex-row-reverse lg:[&>*:nth-child(even)]:gap-52 lg:gap-28"
+>
+  {
+    servicesIntroEntries.map(entry => (
+      <section class="flex flex-col items-center gap-6 sm:flex-row sm:gap-16">
+        <div class="sm:w-3/5">
+          <h2 class="text-green-logo text-2xl font-bold mb-2 lg:text-3xl">
+            {entry.data.heading}
+          </h2>
+          <p class="md:text-xl">{entry.data.paragraph}</p>
+        </div>
+        <div class="w-72 sm:w-2/5">
+          <img src={entry.data.image.src} alt="" />
+        </div>
+      </section>
+    ))
+  }
+</div>
