@@ -5,13 +5,12 @@ import PageLayout from "../layouts/PageLayout.astro";
 
 // component imports
 import SubCTA from "../components/SubCTA.astro";
+import TeamMember from "../components/TeamMember.astro";
 
-// markdown imports
+// content imports
 import { getCollection } from "astro:content";
 
 const teamEntries = await getCollection("team");
-
-import TeamMember from "../components/TeamMember.astro";
 ---
 
 <MainLayout>

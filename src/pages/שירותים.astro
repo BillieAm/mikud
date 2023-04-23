@@ -1,10 +1,23 @@
 ---
-import SubCTA from "../components/SubCTA.astro";
+// layout imports
 import MainLayout from "../layouts/MainLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
+
+// components imports
+import Service from "../components/Service.astro";
+import SubCTA from "../components/SubCTA.astro";
+
+// content imports
+import { getCollection } from "astro:content";
+
+const servicesEntries = await getCollection("services");
 ---
 
 <MainLayout>
-  <PageLayout heading="שירותים" />
-  <SubCTA />
+  <PageLayout heading="שירותים">
+    <div class="flex flex-col gap-12 lg:gap-16">
+      {servicesEntries.map(entry => <Service service={entry} />)}
+    </div>
+    <SubCTA />
+  </PageLayout>
 </MainLayout>
