@@ -3,6 +3,9 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 
+// component imports
+import SubCTA from "../components/SubCTA.astro";
+
 // markdown imports
 import { getCollection } from "astro:content";
 
@@ -20,5 +23,6 @@ import TeamMember from "../components/TeamMember.astro";
       ניהול התקשרות הפורמאלית עם העובד ועוד.
     </p>
     {teamEntries.map(entry => <TeamMember member={entry} />)}
+    <SubCTA />
   </PageLayout>
 </MainLayout>

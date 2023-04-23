@@ -6,10 +6,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Features from "../components/Features.astro";
 import ServicesIntro from "../components/ServicesIntro.astro";
+import SubCTA from "../components/SubCTA.astro";
 ---
 
 <MainLayout>
   <Hero />
   <Features />
   <ServicesIntro />
+  <SubCTA
+    btnText="לחצו כאן"
+    text="לפרטים נוספים על כל השירותים שלנו"
+    href="/שירותים/"
+  />
 </MainLayout>
