@@ -10,7 +10,12 @@ const { service } = Astro.props;
 const { Content } = await service.render();
 ---
 
-<section class="prose md:prose-lg lg:prose-xl prose-ul:mr-4">
-  <h2 id={service.data.id} class="text-green-logo/70">{service.data.title}</h2>
+<section
+  id={service.data.id}
+  class="prose md:prose-lg lg:prose-xl prose-ul:mr-4 pt-24 -mt-12 lg:pt-32 lg:-mt-16"
+>
+  <h2 class="text-green-logo/70">
+    {service.data.title}
+  </h2>
   <Content />
 </section>
