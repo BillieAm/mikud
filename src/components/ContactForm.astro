@@ -1,0 +1,57 @@
+<div class="max-w-md mx-auto lg:mx-0">
+  <h3 class="text-green-logo/70 font-bold">שלחו הודעה</h3>
+  <!-- <form
+        netlify
+        netlify-honeypot
+        name="contact"
+        method="POST"
+        action="/success"
+      > -->
+  <form class="space-y-4 text-base">
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </p>
+    <input type="hidden" name="form-name" value="contact" />
+
+    <div>
+      <label for="name" class="block">שם</label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block">אימייל</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        required
+        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block">הודעה</label>
+      <textarea
+        id="message"
+        wrap="soft"
+        name="message"
+        required
+        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-salmon text-xl font-bold px-8 py-1 border-black border-2 rounded-full"
+    >
+      שלחו
+    </button>
+  </form>
+</div>

@@ -1,7 +1,28 @@
 ---
+// layout imports
 import MainLayout from "../layouts/MainLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+
+// components imports
+import ContactForm from "../components/ContactForm.astro";
+import ContactMedia from "../components/ContactMedia.astro";
+
+// image imports
+import illustation from "../assets/letter-exchange.svg";
 ---
 
 <MainLayout>
-  <h1>צרו קשר</h1>
+  <PageLayout heading="צרו קשר">
+    <h2 class="text-green-logo/70 font-bold text-center mb-8 md:text-xl">
+      תוכלו ליצור איתנו קשר באמצעות הדרכים הבאות:
+    </h2>
+
+    <section class="">
+      <ContactMedia />
+      <div class="lg:grid grid-cols-2 gap-8">
+        <ContactForm />
+        <img src={illustation.src} alt="" class="hidden lg:block" />
+      </div>
+    </section>
+  </PageLayout>
 </MainLayout>
