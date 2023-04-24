@@ -11,6 +11,6 @@ const { Content } = await service.render();
 ---
 
 <section class="prose md:prose-lg lg:prose-xl prose-ul:mr-4">
-  <h2 class="text-green-logo/70">{service.data.title}</h2>
+  <h2 id={service.data.id} class="text-green-logo/70">{service.data.title}</h2>
   <Content />
 </section>

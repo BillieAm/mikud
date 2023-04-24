@@ -2,7 +2,12 @@ import { z, defineCollection } from "astro:content";
 
 const servicesCollection = defineCollection({
   schema: z.object({
-    title: z.string()
+    title: z.string(),
+    id: z.string(),
+    color: z.string(),
+    icon: z.string(),
+    line1: z.string(),
+    line2: z.string()
   })
 });
 
