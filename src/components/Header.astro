@@ -19,7 +19,6 @@ import { navLinks } from "../data";
     <!-- mobile menu islands  -->
     <Hamburger client:idle />
     <MobileMenu client:idle>
-      <Link href="/" text="בית" />
       {navLinks.map(item => <Link href={item.path} text={item.name} />)}
       <Link href="/צור-קשר/" text="צרו קשר" />
     </MobileMenu>
