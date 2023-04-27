@@ -14,7 +14,8 @@ const servicesIntroEntries = await getCollection("servicesIntro");
           <h2 class="text-green-logo text-2xl font-bold mb-2 lg:text-3xl">
             {entry.data.heading}
           </h2>
-          <p class="md:text-xl">{entry.data.paragraph}</p>
+          <p class="md:text-xl">{entry.data.line1}</p>
+          <p class="md:text-xl">{entry.data.line2}</p>
         </div>
         <div class="w-72 sm:w-2/5">
           <img src={entry.data.image.src} alt="" />

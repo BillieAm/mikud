@@ -16,7 +16,8 @@ const servicesIntroCollection = defineCollection({
     z.object({
       image: image(),
       heading: z.string(),
-      paragraph: z.string()
+      line1: z.string(),
+      line2: z.string().optional()
     })
 });
 
