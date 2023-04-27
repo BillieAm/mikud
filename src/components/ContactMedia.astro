@@ -4,26 +4,20 @@ import { Icon } from "astro-icon";
 ---
 
 <div
-  class="flex flex-col justify-center items-center text-center gap-12 max-w-2xl mx-auto my-12 sm:flex-row sm:justify-around md:my-20"
+  class="grid grid-cols-1 justify-center items-center text-center gap-12 max-w-2xl mx-auto my-12 md:grid-cols-3 md:justify-around md:my-20"
 >
   <a href="tel:04-6442777" class="flex flex-col items-center gap-2">
-    <Icon
-      name="mdi:phone"
-      class="bg-lime-200 w-10 p-2 aspect-square rounded-full"
-    />
+    <Icon name="mdi:phone" class="bg-lime-200 w-10 p-2 rounded-full" />
     <span>04-6442777</span>
   </a>
   <a href="tel:054-2240063" class="flex flex-col items-center gap-2">
-    <Icon
-      name="mdi:cellphone"
-      class="bg-purple-200 w-10 p-2 aspect-square rounded-full"
-    />
+    <Icon name="mdi:cellphone" class="bg-purple-200 w-10 p-2 rounded-full" />
     <span>054-2240063</span>
   </a>
   <a href="mailto:mikud-na@mikud.net" class="flex flex-col items-center gap-2">
     <Icon
       name="mdi:email-outline"
-      class="bg-orange-200 w-10 p-2 aspect-square rounded-full"
+      class="bg-orange-200 w-10 p-2 rounded-full"
     />
     <span>mikud-na@mikud.net</span>
   </a>

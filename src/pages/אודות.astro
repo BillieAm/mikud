@@ -13,7 +13,10 @@ import { getCollection } from "astro:content";
 const teamEntries = await getCollection("team");
 ---
 
-<MainLayout>
+<MainLayout
+  title="אודות הצוות שלנו"
+  description="הצוות המקצועי שלנו יעמיד לרשותכם את הידע והניסיון שלו במגוון משימות משאבי האנוש"
+>
   <PageLayout heading="אודות">
     <div class="bg-bg-green max-w-2xl mx-auto mb-20 p-5 rounded shadow">
       <p>

@@ -13,7 +13,10 @@ import { getCollection } from "astro:content";
 const servicesEntries = await getCollection("services");
 ---
 
-<MainLayout>
+<MainLayout
+  title="שירותים מקצועיים במשאבי אנוש"
+  description="שירותים מקצועיים בתחום משאבי האנוש הכוללים טיפול שוטף, גיוס, מערך שכר, מערך נוכחות, ליווי מנהלים ותמיכה במהלכי שינויים ארגוניים"
+>
   <PageLayout heading="שירותים">
     <div class="">
       {servicesEntries.map(entry => <Service service={entry} />)}
