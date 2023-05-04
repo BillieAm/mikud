@@ -1,7 +1,7 @@
 ---
 name: רו״ח רן כמון
 role: מנהל תחום שכר, מיסוי ופנסיה
-image: ../../assets/nissim.jpg
+image: ../../assets/_DSC5045.jpg
 imageAlt: רן כמון
 ---
 
