@@ -11,10 +11,7 @@ const serviceEntries = await getCollection("services");
 <section class="grid grid-cols-2 px-4 py-8 gap-5 sm:grid-cols-3 md:grid-cols-6">
   {
     serviceEntries.map(entry => (
-      <a
-        href={`/שירותים#${entry.data.id}`}
-        class="flex flex-col items-center text-base text-center"
-      >
+      <div class="flex flex-col items-center text-base text-center">
         <div class={`${entry.data.color} w-10 p-2 rounded-full`}>
           <Icon name={entry.data.icon} />
         </div>
@@ -23,7 +20,7 @@ const serviceEntries = await getCollection("services");
             <span class="block">{entry.data.line1}</span> {entry.data.line2}
           </p>
         </div>
-      </a>
+      </div>
     ))
   }
 </section>

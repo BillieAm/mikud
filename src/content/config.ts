@@ -26,7 +26,7 @@ const teamCollection = defineCollection({
     z.object({
       name: z.string(),
       role: z.string(),
-      image: image(),
+      image: image().optional(),
       imageAlt: z.string()
     })
 });

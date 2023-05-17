@@ -18,11 +18,15 @@ const { Content } = await member.render();
   <div
     class="w-72 shrink-0 mx-auto mb-6 rounded-full overflow-hidden aspect-square"
   >
-    <Image
-      src={member.data.image}
-      alt={member.data.imageAlt}
-      class="h-full object-cover"
-    />
+    {
+      member.data.image && (
+        <Image
+          src={member.data.image}
+          alt={member.data.imageAlt}
+          class="h-full object-cover"
+        />
+      )
+    }
   </div>
 
   <div class="col-span-2">
