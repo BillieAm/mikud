@@ -17,6 +17,21 @@ module.exports = {
       fontFamily: {
         sans: ["Rubik", ...defaultTheme.fontFamily.sans],
         headings: ["Assistant", "sans-serif"]
+      },
+      keyframes: {
+        pageLoad: {
+          from: {
+            opacity: 0,
+            transform: "rotateX(-10deg)"
+          },
+          to: {
+            opacity: 1,
+            transform: "rotateX(0)"
+          }
+        }
+      },
+      animation: {
+        pageLoad: "pageLoad 0.75s"
       }
     }
   },
