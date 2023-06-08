@@ -1,19 +1,41 @@
-:root {
-  --background: 0 0% 100%;
-  --text: 249 14% 10%;
-  --text-offset: 249 14% 30%;
-  --primary: 209 37% 38%;
-  --secondary: 0 0% 100%;
-  --accent: 181 38% 52%;
-  --accent-light: 181 38% 90%;
-  --tertiary: 6 85% 54%;
-  --tertiary-bg: 6 85% 90%;
-  --input: 0 0% 93%;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --text: 249 14% 10%;
+    --text-offset: 249 14% 30%;
+    --primary: 209 37% 38%;
+    --secondary: 0 0% 100%;
+    --accent: 181 38% 52%;
+    --accent-light: 181 38% 90%;
+    --tertiary: 6 85% 54%;
+    --tertiary-light: 6 85% 90%;
+    --input: 0 0% 93%;
+  }
 }
 
-body {
-  @apply bg-background text-text;
-  font-feature-settings: "rlig" 1, "calt" 1;
+@layer base {
+  body {
+    @apply bg-background text-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-accent text-white font-semibold rounded-lg;
+  }
+
+  .btn-secondary {
+    @apply py-2 px-4 bg-transparent text-white font-semibold border-white rounded-lg;
+  }
+
+  .btn-inverted {
+    @apply py-2 px-4 bg-white text-accent font-semibold border-accent rounded-lg;
+  }
 }
 
 /* hamburger/close icon animation */

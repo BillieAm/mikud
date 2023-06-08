@@ -2,10 +2,17 @@
 interface Props {
   text: string;
   href: string;
+  icon?: string;
   classes?: string;
 }
 
-const { text, href, classes, ...rest } = Astro.props;
+const {
+  text,
+  href,
+  icon,
+  classes,
+  ...rest
+} = Astro.props;
 ---
 
 <a href={href} class:list={["hover:opacity-70", classes]} {...rest}>{text}</a>
