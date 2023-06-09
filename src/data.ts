@@ -4,15 +4,15 @@ export const navLinks: { name: string; path: string }[] = [
     path: "/"
   },
   {
-    name: "אודות",
-    path: "/אודות/"
-  },
-  {
     name: "שירותים",
-    path: "/שירותים/"
+    path: "#שירותים"
   },
   {
     name: "למה אנחנו?",
-    path: "/למה-אנחנו/"
+    path: "#למה-אנחנו"
+  },
+  {
+    name: "אודות",
+    path: "#אודות"
   }
 ];
