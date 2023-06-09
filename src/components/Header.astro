@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // component imports
 import Link from "./Link.astro";
 import { Hamburger } from "./Hamburger.jsx";
@@ -41,13 +42,7 @@ import { navLinks } from "../data";
       href="/"
       class="p-fluid-xs bg-background flex border-2 border-tertiary-light rounded-full aspect-square absolute -top-1/2"
     >
-      <img
-        src={logo.src}
-        alt="logomark"
-        width="100%"
-        height="100%"
-        class="object-cover"
-      /></a
+      <Image src={logo} alt="logomark" class="object-cover" /></a
     >
   </div>
 </header>
