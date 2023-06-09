@@ -17,17 +17,33 @@
   }
 }
 
+@layer base {
+  body {
+    @apply bg-background text-frontGround text-fluid-1 tracking-wider flex flex-col justify-between min-h-screen;
+  }
+}
+
+/* link styles */
+
 @layer components {
+  .link {
+    @apply hover:opacity-70;
+  }
+
+  .btn {
+    @apply flex gap-3 justify-center items-center px-fluid-m py-fluid-2xs font-semibold border-2 rounded-full transition;
+  }
+
   .btn-primary {
-    @apply py-2 px-4 bg-accent text-white font-semibold rounded-lg;
+    @apply bg-accent text-white border-accent hover:btn-inverted;
   }
 
   .btn-secondary {
-    @apply py-2 px-4 bg-transparent text-white font-semibold border-white rounded-lg;
+    @apply bg-transparent text-white border-white hover:btn-inverted;
   }
 
   .btn-inverted {
-    @apply py-2 px-4 bg-white text-accent font-semibold border-accent rounded-lg;
+    @apply bg-white text-accent border-accent;
   }
 }
 

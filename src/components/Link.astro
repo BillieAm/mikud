@@ -1,18 +1,19 @@
 ---
+import { Icon } from "astro-icon";
+
 interface Props {
   text: string;
   href: string;
+  type: "link" | "btn";
+  btnStyle?: "btn-primary" | "btn-secondary" | "btn-inverted";
   icon?: string;
   classes?: string;
 }
 
-const {
-  text,
-  href,
-  icon,
-  classes,
-  ...rest
-} = Astro.props;
+const { text, href, type, btnStyle, icon, classes, ...rest } = Astro.props;
 ---
 
-<a href={href} class:list={["hover:opacity-70", classes]} {...rest}>{text}</a>
+<a href={href} class:list={[type, btnStyle, classes]} {...rest}
+  >{text}
+  {icon && <Icon name={icon} class="w-6" />}
+</a>

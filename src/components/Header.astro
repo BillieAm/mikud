@@ -19,18 +19,28 @@ import { navLinks } from "../data";
     <!-- mobile menu islands  -->
     <Hamburger client:idle />
     <MobileMenu client:idle>
-      {navLinks.map(item => <Link href={item.path} text={item.name} />)}
-      <Link href="/צור-קשר/" text="צרו קשר" />
+      {
+        navLinks.map(item => (
+          <Link href={item.path} text={item.name} type="link" />
+        ))
+      }
+      <Link href="/צור-קשר/" text="צרו קשר" type="link" />
     </MobileMenu>
 
     <!-- larger devices menu -->
     <nav class="hidden lg:flex justify-self-start gap-11">
-      {navLinks.map(item => <Link href={item.path} text={item.name} />)}
+      {
+        navLinks.map(item => (
+          <Link href={item.path} text={item.name} type="link" />
+        ))
+      }
     </nav>
     <Link
-      href="/צור-קשר/"
-      text="צרו קשר"
-      classes="hidden justify-self-end text-white bg-black px-6 py-2 rounded md:block"
+      href="tel:04-6442777"
+      text="דברו אתנו"
+      type="btn"
+      icon="lucide:phone-call"
+      classes="hidden justify-self-end text-white bg-black md:flex hover:opacity-80"
     />
   </div>
 

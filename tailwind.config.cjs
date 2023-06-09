@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         background: "hsl(var(--background))",
-        text: {
+        frontGround: {
           DEFAULT: "hsl(var(--text))",
           offset: "hsl(var(--text-offset))"
         },
