@@ -21,6 +21,15 @@ const servicesIntroCollection = defineCollection({
     })
 });
 
+const servicesCardsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    color: z.string(),
+    icon: z.string()
+  })
+});
+
 const teamCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
@@ -34,5 +43,6 @@ const teamCollection = defineCollection({
 export const collections = {
   services: servicesCollection,
   servicesIntro: servicesIntroCollection,
+  servicesCards: servicesCardsCollection,
   team: teamCollection
 };

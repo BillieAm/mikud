@@ -1,0 +1,11 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import { getCollection } from "astro:content";
+
+const servicesEntries = await getCollection("services");
+---
+
+<SectionLayout
+  heading="השירותים שלנו"
+  subheading="אנו מתחייבים לשירות מקצועי ואדיב ולמענה מהיר ומדויק לצרכי משאבי האנוש שלכם"
+/>
