@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+// Layout imports
+import SectionLayout from "../layouts/SectionLayout.astro";
+
+// content imports
+import { getCollection } from "astro:content";
+
+const teamEntries = await getCollection("team");
+console.log(teamEntries);
+---
+
+<SectionLayout
+  heading="הצוות שלנו"
+  subheading="הצוות המקצועי שלנו ישמח להעמיד לרשותכם את הידע והניסיון שלו במגוון משימות משאבי אנוש"
+  id="אודות"
+  bgColor="bg-accent-light"
+>
+  <div class="text-tertiary-light flex flex-col gap-8 md:flex-row">
+    {
+      teamEntries.map(entry => (
+        <div class="bg-primary p-fluid-l rounded-3xl flex-1">
+          <div class="w-2/3 mx-auto mb-2 rounded-full overflow-hidden aspect-square">
+            {entry.data.image && (
+              <Image
+                src={entry.data.image}
+                alt={entry.data.imageAlt}
+                class="h-full object-cover"
+              />
+            )}
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-fluid-2 font-bold">{entry.data.name}</h3>
+            <h4>{entry.data.role}</h4>
+            <hr class="w-1/6 mx-auto my-4 border-tertiary border-2 rounded-full" />
+          </div>
+          <p class="text-fluid-1">{entry.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionLayout>
