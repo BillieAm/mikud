@@ -1,0 +1,34 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+
+const textData = [
+  {
+    q: "למה אנחנו?",
+    a: "כי אנו מאמינים שלניסיון אין מחיר ולמקצוענות אין תחליף. הלקוחות שלנו נהנים משני העולמות – לצוות שלנו ניסיון מצטבר של מעל 30 שנה, וידע אקדמי ומקצועי עשיר בעולמות משאבי האנוש, ניסיון וידע שעומדים לרשותכם ומחויבים להצלחה שלכם, אנו מתחייבים לשירות מקצועי ואדיב ולמענה מהיר ומדויק לצרכי משאבי האנוש שלכם."
+  },
+  {
+    q: "מה אתם מרוויחים?",
+    a: "אתם יכולים להתמקד בפעילות העיקרית של הארגון, עם ביטחון מלא שהעובדים שלכם מטופלים במקצועיות ואנושיות על-ידי צוות מחויב ומסור, ושאתם עומדים בכל דרישות החוק ."
+  }
+];
+---
+
+<SectionLayout
+  heading="למה אנחנו?"
+  id="למה-אנחנו"
+  bgColor="bg-primary"
+  textColor="text-white"
+>
+  <div class="max-w-4xl mx-auto space-y-8">
+    {
+      textData.map(item => (
+        <div class="lg:grid grid-cols-4 items-center gap-4">
+          <div class="w-36 mx-auto mb-3 p-2 bg-tertiary-light aspect-square rounded-full flex justify-center items-center">
+            <h3 class="text-primary font-bold text-center">{item.q}</h3>
+          </div>
+          <p class="text-fluid-0 text-tertiary-light col-span-3">{item.a}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionLayout>
