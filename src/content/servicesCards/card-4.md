@@ -1,6 +1,6 @@
 ---
 title: מערכת נוכחות
 description: הקמה ו/או שדרוג של מערכת הנוכחות הקיימת, בהתאם לצרכי הארגון, כולל אפשרויות דיווח מגוונות ומותאמות לעיסוקים השונים. אפשרות חיבור לממשק לשכר.
-color: "bg-purple"
+color: ["bg-purple-100", "text-purple-600"]
 icon: "mdi:clock-time-eight-outline"
 ---

@@ -25,7 +25,7 @@ const servicesCardsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    color: z.string(),
+    color: z.array(z.string()),
     icon: z.string()
   })
 });

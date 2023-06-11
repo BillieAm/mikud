@@ -2,10 +2,30 @@
 import SectionLayout from "../layouts/SectionLayout.astro";
 import { getCollection } from "astro:content";
 
-const servicesEntries = await getCollection("services");
+// library imports
+import { Icon } from "astro-icon";
+
+const servicesEntries = await getCollection("servicesCards");
 ---
 
 <SectionLayout
   heading="השירותים שלנו"
   subheading="אנו מתחייבים לשירות מקצועי ואדיב ולמענה מהיר ומדויק לצרכי משאבי האנוש שלכם"
-/>
+  id="שירותים"
+>
+  <div class="grid auto-rows-fr sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {
+      servicesEntries.map(service => (
+        <div class="text-fluid-0 p-fluid-m border-[1px] border-accent rounded-md shadow-[8px_8px_0] shadow-accent-light text-center flex flex-col gap-4 justify-center sm:justify-normal lg:last:col-start-2 hover:-translate-y-2 hover:shadow-[16px_16px_0] hover:shadow-accent-light">
+          <div class="flex flex-col items-center gap-2">
+            <div class={`${service.data.color[0]} w-10 p-2 rounded-full`}>
+              <Icon name={service.data.icon} class={service.data.color[1]} />
+            </div>
+            <h3 class="font-bold">{service.data.title}</h3>
+          </div>
+          <p class="text-frontGround-offset">{service.data.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</SectionLayout>
