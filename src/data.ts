@@ -8,8 +8,8 @@ export const navLinks: { name: string; path: string }[] = [
     path: "#שירותים"
   },
   {
-    name: "למה אנחנו?",
-    path: "#למה-אנחנו"
+    name: "למה כדאי?",
+    path: "#למה-כדאי"
   },
   {
     name: "אודות",

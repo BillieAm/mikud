@@ -1,7 +1,7 @@
 ---
 name: אריאל דניאלס
 role: מנהל תחום הדרכה
-image: ../../assets/ariel.jpg
+image: ../../assets/ariel-1.png
 imageAlt: אריאל דניאלס
 ---
 
