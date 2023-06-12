@@ -3,7 +3,11 @@ import { Icon } from "astro-icon";
 ---
 
 <div class="grow-[2]">
-  <form class="grid gap-fluid-s md:grid-cols-2 auto-rows-fr">
+  <form
+    action="https://formsubmit.co/mikud-na@mikud.net"
+    method="POST"
+    class="grid gap-fluid-s md:grid-cols-2 auto-rows-fr"
+  >
     <p class="hidden">
       <label>
         Don’t fill this out if you’re human: <input name="bot-field" />
@@ -13,7 +17,6 @@ import { Icon } from "astro-icon";
 
     <div>
       <input
-        id="name"
         type="text"
         name="name"
         placeholder="שם"
@@ -23,7 +26,6 @@ import { Icon } from "astro-icon";
 
     <div>
       <input
-        id="email"
         type="email"
         name="email"
         placeholder="אימייל"
@@ -34,7 +36,6 @@ import { Icon } from "astro-icon";
 
     <div class="col-span-full row-span-2">
       <textarea
-        id="message"
         wrap="soft"
         name="message"
         placeholder="הודעה"

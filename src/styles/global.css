@@ -35,7 +35,7 @@
   }
 
   .btn-primary {
-    @apply bg-accent text-white border-accent hover:btn-inverted;
+    @apply bg-accent text-white border-accent;
   }
 
   .btn-secondary {

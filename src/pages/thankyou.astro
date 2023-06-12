@@ -1,0 +1,21 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+---
+
+<MainLayout
+  title="מקוד | תודה על ההודעה"
+  description="טיפול אישי ומקצועי בהון האנושי שלכם במיקור חוץ"
+>
+  <div class="h-screen flex flex-col justify-center items-center gap-6">
+    <h1 class="text-fluid-3">תודה רבה שיצרתם קשר!</h1>
+    <h2>נחזור אליכם בהקדם</h2>
+    <Link
+      href="/"
+      text="חזרה לעמוד הבית"
+      type="btn"
+      btnStyle="btn-primary"
+      classes="hover:bg-white hover:text-accent hover:border-accent"
+    />
+  </div>
+</MainLayout>
