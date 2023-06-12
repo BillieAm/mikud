@@ -18,6 +18,9 @@
 }
 
 @layer base {
+  html {
+    scroll-padding-top: 6rem;
+  }
   body {
     @apply bg-background text-frontGround text-fluid-1 tracking-wider flex flex-col justify-between min-h-screen;
   }
