@@ -16,11 +16,11 @@ console.log(teamEntries);
   id="אודות"
   bgColor="bg-accent-light"
 >
-  <div class="text-tertiary-light flex flex-col gap-8 md:flex-row">
+  <div class="text-tertiary-light flex flex-col gap-8 lg:flex-row items-start">
     {
       teamEntries.map(entry => (
         <div class="bg-primary p-fluid-l rounded-3xl flex-1">
-          <div class="w-2/3 mx-auto mb-2 rounded-full overflow-hidden aspect-square">
+          <div class="w-2/3 max-w-[12rem] mx-auto mb-2 rounded-full overflow-hidden aspect-square">
             {entry.data.image && (
               <Image
                 src={entry.data.image}

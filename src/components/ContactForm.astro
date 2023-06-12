@@ -1,19 +1,9 @@
-<div class="max-w-md mx-auto lg:mx-0">
-  <h3 class="text-green-logo/70 font-bold">שלחו הודעה</h3>
-  <!-- <form
-        netlify
-        netlify-honeypot
-        name="contact"
-        method="POST"
-        action="/success"
-      > -->
-  <!-- <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-    class="space-y-4 text-base"
-  > -->
-  <form class="space-y-4 text-base">
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="grow-[2]">
+  <form class="grid gap-fluid-s md:grid-cols-2 auto-rows-fr">
     <p class="hidden">
       <label>
         Don’t fill this out if you’re human: <input name="bot-field" />
@@ -22,42 +12,43 @@
     <input type="hidden" name="form-name" value="contact" />
 
     <div>
-      <label for="name" class="block">שם</label>
       <input
         id="name"
         type="text"
         name="name"
-        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+        placeholder="שם"
+        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background"
       />
     </div>
 
     <div>
-      <label for="email" class="block">אימייל</label>
       <input
         id="email"
         type="email"
         name="email"
+        placeholder="אימייל"
         required
-        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background"
       />
     </div>
 
-    <div>
-      <label for="message" class="block">הודעה</label>
+    <div class="col-span-full row-span-2">
       <textarea
         id="message"
         wrap="soft"
         name="message"
+        placeholder="הודעה"
         required
-        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-aqua focus:ring-aqua"
+        class="w-full h-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background"
       ></textarea>
     </div>
 
     <button
       type="submit"
-      class="bg-purple-300 text-xl font-bold px-8 py-1 border-black border-2 rounded-full"
+      class="bg-accent text-white px-fluid-m py-fluid-2xs font-semibold w-max border-2 rounded-full transition flex items-center gap-3 self-end hover:bg-white hover:text-accent border-accent"
     >
-      שלחו
+      <span>שלחו</span>
+      <Icon name="tabler:send" class="w-6" />
     </button>
   </form>
 </div>

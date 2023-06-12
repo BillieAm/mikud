@@ -1,0 +1,75 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import ContactForm from "./ContactForm.astro";
+import Link from "./Link.astro";
+---
+
+<SectionLayout heading="דברו איתנו" id="צור-קשר">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-fluid-2xl">
+    <div class="flex justify-around md:flex-col md:justify-between">
+      <Link
+        text="נייד"
+        href="tel:054-2240063"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:device-mobile"
+        classes="hidden md:flex"
+      />
+      <Link
+        text="וואטסאפ"
+        href="https://wa.me/972542240063"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:brand-whatsapp"
+        classes="hidden md:flex"
+      />
+      <Link
+        text="טלפון"
+        href="tel:04-6442777"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:phone"
+        classes="hidden md:flex"
+      />
+      <Link
+        text="אימייל"
+        href="mailto:mikud-na@mikud.net"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:mail"
+        classes="hidden md:flex"
+      />
+
+      <!-- mobile -->
+      <Link
+        href="tel:054-2240063"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:device-mobile"
+        classes="md:hidden w-10 p-2 rounded-full"
+      />
+      <Link
+        href="https://wa.me/972542240063"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:brand-whatsapp"
+        classes="md:hidden w-10 p-2 rounded-full"
+      />
+      <Link
+        href="tel:04-6442777"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:phone"
+        classes="md:hidden w-10 p-2 rounded-full"
+      />
+      <Link
+        href="mailto:mikud-na@mikud.net"
+        type="btn"
+        btnStyle="btn-inverted"
+        icon="tabler:mail"
+        classes="md:hidden w-10 p-2 rounded-full"
+      />
+    </div>
+    <ContactForm />
+  </div>
+</SectionLayout>

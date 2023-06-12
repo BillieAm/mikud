@@ -43,7 +43,7 @@
   }
 
   .btn-inverted {
-    @apply bg-white text-accent border-accent;
+    @apply bg-white text-accent border-accent hover:bg-accent hover:text-white;
   }
 }
 
