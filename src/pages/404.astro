@@ -1,16 +1,13 @@
 ---
 // component imports
 import Link from "../components/Link.astro";
-import SubCTA from "../components/SubCTA.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import PageLayout from "../layouts/SectionLayout.astro";
 ---
 
 <MainLayout title="עמוד לא קיים" description="עמוד לא קיים">
-  <PageLayout heading="404">
-    <div class="text-center">
-      <h2>אופס... הגעת לעמוד שאינו קיים</h2>
-      <SubCTA href="/" btnText="לחצו כאן" text="לחזרה לעמוד הבית" />
-    </div>
-  </PageLayout>
+  <div class="text-center">
+    <h2>אופס... הגעת לעמוד שאינו קיים</h2>
+    <p>לחזרה לעמוד הבית</p>
+    <Link href="/" text="לחצו כאן" type="btn" />
+  </div>
 </MainLayout>

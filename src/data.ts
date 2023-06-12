@@ -1,7 +1,7 @@
 export const navLinks: { name: string; path: string }[] = [
   {
     name: "בית",
-    path: "/"
+    path: "#"
   },
   {
     name: "שירותים",
