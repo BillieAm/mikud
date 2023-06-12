@@ -8,19 +8,16 @@ import { Icon } from "astro-icon";
     method="POST"
     class="grid gap-fluid-s md:grid-cols-2 auto-rows-fr"
   >
-    <p class="hidden">
-      <label>
-        Don’t fill this out if you’re human: <input name="bot-field" />
-      </label>
-    </p>
-    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="_next" value="https://mikud.net/thankyou.html" />
+    <input type="hidden" name="_subject" value="הודעה חדשה מאתר מקוד" />
 
     <div>
       <input
         type="text"
         name="name"
         placeholder="שם"
-        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background"
+        required
+        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       />
     </div>
 
@@ -30,7 +27,7 @@ import { Icon } from "astro-icon";
         name="email"
         placeholder="אימייל"
         required
-        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background"
+        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       />
     </div>
 
@@ -40,7 +37,7 @@ import { Icon } from "astro-icon";
         name="message"
         placeholder="הודעה"
         required
-        class="w-full h-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background"
+        class="w-full h-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       ></textarea>
     </div>
 
