@@ -48,6 +48,10 @@
   .btn-inverted {
     @apply bg-white text-accent border-accent hover:bg-accent hover:text-white;
   }
+
+  .btn-icon {
+    @apply w-14 p-3 rounded-full aspect-square;
+  }
 }
 
 /* hamburger/close icon animation */
