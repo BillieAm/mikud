@@ -14,7 +14,7 @@ import { navLinks } from "../data";
 
 <header class="fixed top-0 z-10 w-full bg-background">
   <div
-    class="max-w-screen-2xl mx-auto px-fluid-m py-5 flex items-center justify-between border-b-2 border-tertiary-light"
+    class="max-w-screen-2xl mx-auto px-fluid-m py-fluid-s flex items-center justify-between border-b-2 border-tertiary-light"
   >
     <!-- mobile menu islands  -->
     <Hamburger client:idle />
@@ -26,6 +26,12 @@ import { navLinks } from "../data";
       }
       <Link href="#צור-קשר" text="צרו קשר" type="link" />
     </MobileMenu>
+    <Link
+      href="tel:04-6442777"
+      type="btn"
+      icon="lucide:phone-call"
+      classes="text-white bg-black w-10 p-2 aspect-square rounded-full md:hidden"
+    />
 
     <!-- larger devices menu -->
     <nav class="hidden lg:flex justify-self-start gap-11">
@@ -36,11 +42,10 @@ import { navLinks } from "../data";
       }
     </nav>
     <Link
-      href="tel:04-6442777"
+      href="#צור-קשר"
       text="דברו אתנו"
       type="btn"
-      icon="lucide:phone-call"
-      classes="hidden justify-self-end text-white bg-black md:flex hover:opacity-80"
+      classes="hidden text-white bg-black md:flex hover:opacity-80"
     />
   </div>
 
