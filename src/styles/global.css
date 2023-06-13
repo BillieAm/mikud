@@ -19,8 +19,9 @@
 
 @layer base {
   html {
-    scroll-padding-top: 6rem;
+    @apply scroll-pt-fluid-xl md:scroll-pt-fluid-2xl;
   }
+
   body {
     @apply bg-background text-frontGround text-fluid-1 tracking-wider flex flex-col justify-between min-h-screen;
   }
@@ -50,7 +51,7 @@
   }
 
   .btn-icon {
-    @apply w-14 p-3 rounded-full aspect-square;
+    @apply w-14 p-3 rounded-full aspect-square bg-white text-accent border-accent hover:bg-accent hover:text-white md:hidden;
   }
 }
 
