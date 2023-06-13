@@ -16,7 +16,7 @@ const servicesEntries = await getCollection("servicesCards");
   <div class="grid auto-rows-fr sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {
       servicesEntries.map(service => (
-        <div class="text-fluid-0 p-fluid-m border-[1px] border-accent rounded-md shadow-[8px_8px_0] shadow-accent-light text-center flex flex-col gap-4 justify-center sm:justify-normal hover:-translate-y-2 hover:shadow-[16px_16px_0] hover:shadow-accent-light">
+        <div class="text-fluid-0 p-fluid-m border-[1px] border-accent rounded-md shadow-[8px_8px_0] shadow-accent-light text-center flex flex-col gap-4 justify-center sm:justify-normal transition hover:-translate-y-2 hover:shadow-[16px_16px_0] hover:shadow-accent-light/60">
           <div class="flex flex-col items-center gap-2">
             <div class={`${service.data.color[0]} w-10 p-2 rounded-full`}>
               <Icon name={service.data.icon} class={service.data.color[1]} />
