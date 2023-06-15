@@ -13,7 +13,7 @@ import Link from "./Link.astro";
         type="btn"
         btnStyle="btn-inverted"
         icon="tabler:device-mobile"
-        classes="hidden md:flex"
+        classes="hidden hover:btn-primary md:flex"
       />
       <Link
         text="וואטסאפ"
@@ -21,7 +21,7 @@ import Link from "./Link.astro";
         type="btn"
         btnStyle="btn-inverted"
         icon="tabler:brand-whatsapp"
-        classes="hidden md:flex"
+        classes="hidden hover:btn-primary md:flex"
       />
       <Link
         text="טלפון"
@@ -29,7 +29,7 @@ import Link from "./Link.astro";
         type="btn"
         btnStyle="btn-inverted"
         icon="tabler:phone"
-        classes="hidden md:flex"
+        classes="hidden hover:btn-primary md:flex"
       />
       <Link
         text="אימייל"
@@ -37,7 +37,7 @@ import Link from "./Link.astro";
         type="btn"
         btnStyle="btn-inverted"
         icon="tabler:mail"
-        classes="hidden md:flex"
+        classes="hidden hover:btn-primary md:flex"
       />
 
       <!-- mobile -->
@@ -46,24 +46,28 @@ import Link from "./Link.astro";
         type="btn"
         btnStyle="btn-icon"
         icon="tabler:device-mobile"
+        classes="hover:btn-primary"
       />
       <Link
         href="https://wa.me/972542240063"
         type="btn"
         btnStyle="btn-icon"
         icon="tabler:brand-whatsapp"
+        classes="hover:btn-primary"
       />
       <Link
         href="tel:04-6442777"
         type="btn"
         btnStyle="btn-icon"
         icon="tabler:phone"
+        classes="hover:btn-primary"
       />
       <Link
         href="mailto:mikud-na@mikud.net"
         type="btn"
         btnStyle="btn-icon"
         icon="tabler:mail"
+        classes="hover:btn-primary"
       />
     </div>
     <ContactForm />

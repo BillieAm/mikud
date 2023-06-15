@@ -8,11 +8,7 @@ import { Icon } from "astro-icon";
 const servicesEntries = await getCollection("servicesCards");
 ---
 
-<SectionLayout
-  heading="השירותים שלנו"
-  subheading="אנו מתחייבים לשירות מקצועי ואדיב ולמענה מהיר ומדויק לצרכי משאבי האנוש שלכם"
-  id="שירותים"
->
+<SectionLayout heading="השירותים שלנו" id="שירותים">
   <div class="grid auto-rows-fr sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {
       servicesEntries.map(service => (

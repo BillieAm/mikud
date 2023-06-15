@@ -43,15 +43,15 @@
   }
 
   .btn-secondary {
-    @apply bg-transparent text-white border-white hover:btn-inverted;
+    @apply bg-transparent text-white border-white;
   }
 
   .btn-inverted {
-    @apply bg-white text-accent border-accent hover:bg-accent hover:text-white;
+    @apply bg-white text-accent border-accent;
   }
 
   .btn-icon {
-    @apply w-14 p-3 rounded-full aspect-square bg-white text-accent border-accent hover:bg-accent hover:text-white md:hidden;
+    @apply w-14 p-3 rounded-full aspect-square bg-white text-accent border-accent  md:hidden;
   }
 }
 

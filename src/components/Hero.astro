@@ -11,11 +11,13 @@ import Link from "./Link.astro";
     class="min-h-screen bg-[url('../assets/hero-bg-filter.jpg')] bg-cover bg-center px-fluid-s py-fluid-xl text-center flex flex-col items-center justify-center gap-fluid-xl md:bg-fixed"
   >
     <h1 class="text-fluid-5 font-semibold leading-none md:mt-28">
-      ניהול אנשים מכוון מטרה
+      ניהול אנשים <span class="whitespace-nowrap">מכוון מטרה</span>
     </h1>
     <div class="flex flex-col gap-5 text-fluid-2">
       <h2>
-        פתרונות מקצועיים במיקור חוץ לניהול משאבי אנוש לעסקים בינוניים וקטנים
+        פתרונות מקצועיים במיקור חוץ לניהול משאבי אנוש <span
+          class="whitespace-nowrap">לעסקים בינוניים וקטנים</span
+        >
       </h2>
       <h2>ייעוץ וליווי ארגוני</h2>
     </div>
@@ -29,7 +31,13 @@ import Link from "./Link.astro";
         icon="lucide:phone-call"
         classes="hover:bg-white hover:text-accent hover:border-accent"
       />
-      <Link text="לפרטים" href="#שירותים" type="btn" btnStyle="btn-secondary" />
+      <Link
+        text="לפרטים"
+        href="#שירותים"
+        type="btn"
+        btnStyle="btn-secondary"
+        classes="hover:btn-inverted"
+      />
     </div>
   </div>
 </section>
