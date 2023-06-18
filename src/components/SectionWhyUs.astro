@@ -4,7 +4,9 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 const textData = [
   {
     q: "מה אתם מרוויחים?",
-    a: "אתם יכולים להתמקד בפעילות העיקרית של הארגון, עם ביטחון מלא שהעובדים שלכם מטופלים במקצועיות ואנושיות על-ידי צוות מחויב ומסור, ושאתם עומדים בכל דרישות החוק ."
+    a: `טיפול באנשים זה מקצוע, וללא פונקצית משאבי אנוש מקצועית אתם חשופים לסיכונים ולהשקעה מיותרת של זמן וכסף.
+
+הצוות המחויב והמסור של מקוד, יאפשר לכם להתמקד בפעילות העיקרית של הארגון, ללא דאגות, ועם ביטחון מלא שאתם עומדים בכל דרישות החוק ושהעובדים שלכם מטופלים במקצועיות ואנושיות.`
   },
   {
     q: "למה אנחנו?",
@@ -26,7 +28,9 @@ const textData = [
           <div class="w-36 mx-auto mb-3 p-2 bg-tertiary-light aspect-square rounded-full flex justify-center items-center">
             <h3 class="text-primary font-bold text-center">{item.q}</h3>
           </div>
-          <p class="text-fluid-0 text-tertiary-light col-span-3">{item.a}</p>
+          <div class="whitespace-pre-line col-span-3">
+            <p class="text-fluid-0 text-tertiary-light">{item.a}</p>
+          </div>
         </div>
       ))
     }
