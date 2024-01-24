@@ -14,7 +14,7 @@ export const MobileMenu = ({ children }) => {
       <div class="fixed inset-0 bg-black/30 backdrop-blur-sm"></div>
       <nav
         onClick={e => menuLinkClick(e)}
-        class="flex flex-col gap-7 fixed inset-y-0 right-0 left-1/4 bg-white px-11 py-32 font-bold"
+        class="fixed inset-y-0 right-0 left-1/4 bg-white px-11 py-32 font-bold"
       >
         {children}
       </nav>

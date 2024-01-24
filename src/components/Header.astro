@@ -19,21 +19,29 @@ import { navLinks } from "../data";
     <!-- mobile menu islands  -->
     <Hamburger client:idle />
     <MobileMenu client:idle>
-      {
-        navLinks.map(item => (
-          <Link href={item.path} text={item.name} type="link" />
-        ))
-      }
-      <Link href="#צור-קשר" text="צרו קשר" type="link" />
+      <ul class="flex flex-col gap-7">
+        {
+          navLinks.map(item => (
+            <li>
+              <Link href={item.path} text={item.name} type="link" />
+            </li>
+          ))
+        }
+        <Link href="#צור-קשר" text="צרו קשר" type="link" />
+      </ul>
     </MobileMenu>
 
     <!-- larger devices menu -->
-    <nav class="hidden lg:flex justify-self-start gap-11">
-      {
-        navLinks.map(item => (
-          <Link href={item.path} text={item.name} type="link" />
-        ))
-      }
+    <nav class="hidden lg:flex justify-self-start">
+      <ul class="flex gap-11">
+        {
+          navLinks.map(item => (
+            <li>
+              <Link href={item.path} text={item.name} type="link" />
+            </li>
+          ))
+        }
+      </ul>
     </nav>
     <Link
       href="#צור-קשר"
@@ -51,7 +59,7 @@ import { navLinks } from "../data";
       href="/"
       class="p-fluid-xs bg-background flex border-2 border-tertiary-light rounded-full aspect-square absolute -top-1/2"
     >
-      <Image src={logo} alt="logomark" class="object-cover aspect-square" /></a
+      <Image src={logo} alt="מיקוד" class="object-cover aspect-square" /></a
     >
   </div>
 </header>
