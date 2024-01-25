@@ -12,30 +12,33 @@ import { Icon } from "astro-icon";
     <input type="hidden" name="_subject" value="הודעה חדשה מאתר מקוד" />
 
     <div>
+      <label for="name">שם</label>
       <input
+        id="name"
         type="text"
         name="name"
-        placeholder="שם"
         required
-        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
+        class="w-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       />
     </div>
 
     <div>
+      <label for="email">דוא״ל</label>
       <input
+        id="email"
         type="email"
         name="email"
-        placeholder="אימייל"
         required
-        class="w-full p-fluid-xs bg-input border-none rounded-full focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
+        class="w-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       />
     </div>
 
     <div class="col-span-full row-span-2">
+      <label for="message">הודעה</label>
       <textarea
+        id="message"
         wrap="soft"
         name="message"
-        placeholder="הודעה"
         required
         class="w-full h-full p-fluid-xs bg-input border-none rounded-lg focus:ring-accent focus:ring-2 focus:bg-background valid:ring-accent valid:ring-2 valid:bg-background"
       ></textarea>
