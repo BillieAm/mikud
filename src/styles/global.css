@@ -9,7 +9,7 @@
     --text-offset: 249 14% 50%;
     --primary: 209 37% 38%;
     --secondary: 0 0% 100%;
-    --accent: 181 38% 52%;
+    --accent: 181 38% 35%;
     --accent-light: 181 38% 90%;
     --tertiary: 6 85% 54%;
     --tertiary-light: 6 85% 90%;
@@ -39,7 +39,7 @@
   }
 
   .btn-primary {
-    @apply bg-accent text-white border-accent;
+    @apply bg-accent text-white border-accent border-white;
   }
 
   .btn-secondary {
