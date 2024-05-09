@@ -8,6 +8,15 @@ const { title, description } = Astro.props;
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "מיקוד - ניהול אנשים מכוון מטרה",
+      "alternateName" : "מיקוד - ניהול משאבי אנוש במיקור חוץ",
+      "url" : "https://mikud.net/"
+    }
+  </script>
   <meta name="description" content={description} />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
